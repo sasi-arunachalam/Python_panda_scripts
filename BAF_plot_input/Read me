@@ -1,4 +1,4 @@
-From the high20file use GetRepresentative.py pythn script to bin mutations 
+From the high20file use GetRepresentative.py python script to bin mutations 
 code execution: 
 python GetRepresentative.py input  250000 output
 example: 
