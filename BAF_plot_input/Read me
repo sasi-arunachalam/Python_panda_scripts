@@ -9,3 +9,6 @@ python GetRepresentative.py Sample_A1_G1.high_20.out  250000 Sample_A1.txt
 head of Sample_A1_G1.high_20.out is provided to know the data structure
 
 GetRepresentative.py is program written by Samuel Brady Phd from St. Jude
+
+Work flow:
+High20files > GetRepresentative.py > binned output > b_alleplot_input.ipynb > bplot.input > R script to plot copynumber and baf plot
