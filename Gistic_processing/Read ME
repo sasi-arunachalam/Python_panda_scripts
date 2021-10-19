@@ -1,0 +1,27 @@
+GISTIC2.0 facilitates sensitive and confident localization of the targets of focal somatic copy-number alteration in human cancers (PMID: 21527027)
+
+The Gistic has many outputs such as txt files,pdf,mat etc. The txt files A) all_lesions.conf_75.txt B)amp_genes.conf_75.txt  C)del_genes.conf_75.txt are primarly used to
+process the information for downstream analysis.
+
+Gistic is run by following command on linux enviroment: 
+module load matlab
+## output directory
+outDir=/home/x/y/Patient1_results/
+mkdir -p $outDir 
+
+segFile=Patinet1.txt #copy number data
+refGeneFile=hg19.mat
+
+## call script that sets MCR environment and calls GISTIC executable 
+bsub -J Gistic -q compbio -e stderr.err -o stdout.out -R rusage[mem=2000] "./gistic2 -b $outDir -seg $segFile  -refgene $refGeneFile"
+
+
+Te Gistic results file has many outputs including A) all_lesions.conf_75.txt B)amp_genes.conf_75.txt  C)del_genes.conf_75.txt. These files are inputs for
+our analysis.
+
+The driver genes are specific for cancer types.
+
+There are three patients in our sample analysis. Each patient have many tumor samples that are to be analyzed. 
+
+
+The final output files  are Patient1_amp_del_focal_driver_combined.xlsx, Patient2_amp_del_focal_driver_combined.xlsx and Patient3_amp_del_focal_driver_combined.xlsx
