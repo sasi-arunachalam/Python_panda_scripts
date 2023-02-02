@@ -1,0 +1,4 @@
+This is a modified version of the Duke breast cancer data with radiomic features. Data from Duke demonstrates a pathological response to treatment. 
+Thus, the objective of the exercise is to predict the pathological response to therapy using radiomic features. 
+
+I combined codes from multiple github pages for best model selection, best feature selection for prediction .  
